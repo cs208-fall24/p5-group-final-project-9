@@ -1,7 +1,43 @@
 doctype html
-link(rel='stylesheet' href='css/student1.css')
+html
+  head
+    title Welcome to the Party!
+    link(rel='stylesheet' href='css/student1.css')
+  body
+    h1(class="home-h1") Chandler Black
+    main(class="parent")
+      section(class="location-section")
+        h2 Welcome to the Party major webpage where our motto is, 
+        h2 P-A-R-T- Y? Cuz you Gotta!
+        img(src="img/Patrick.gif", alt="Dance Patrick Dance", class="img-patrick")
+        h2 Location
+        p We are located near the center of downtown Party-Town USA just off of LOL St. 
+      
+      section(class="about-section")
+        h2 About
+        section(class="about-sub1")
+          h3 Many Different Emphases Offered! 
+          p Get an emphasis in such fun things as, large parties, dinner parties, raving, and many more!
+        section(class="about-sub2")
+          h3 Regular Visits From Esteemed Professionals!
+          p We have many guest lectures from partying professionals such as famous comedians, actors, and even the queen of England's personal party coordinator!
+        section(class="about-sub3")
+          h3 A Fun and Relaxed Student Life!
+          p Enjoy a good school life balance. If your excuse for being late to class is "I was partying" you'll get extra credit... if you remembered to invite your professor 
 
-head
-    title Party - student1
-body
-    h1 A complete degree on how to party!
+      section(class="things-section")
+        h2 Things to Do
+        ul(class="home-things-list")
+          li Take a variety of different classes on partying.
+          li Enjoy many different activities.
+          li Host your own parties for extra credit, on any class!
+          li Engage in degree specific extra-curricular activities!
+        img(src="img/Party_people.jpg", alt="Uncomfortable looking people", class="img-people")
+
+      section(class="comments-section")
+        h2 
+          a(href="/comments" class="home-link") Student Comments
+        if comments_array && comments_array.length > 0
+          ul(class="home-comments-list")
+            each comment in comments_array
+              li= comment.text

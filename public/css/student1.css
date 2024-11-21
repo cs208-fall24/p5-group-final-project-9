@@ -1,3 +1,182 @@
-body{
-    background-color: hotpink;
-}
+
+  /*-------------------- INDEX CSS --------------------*/
+  body {
+    font-family: Arial, sans-serif;
+    color: #603939;
+    background-color: chartreuse;
+    background-image: repeating-radial-gradient(rgb(157, 76, 76), rgb(214, 214, 122), rgb(170, 241, 170), rgb(239, 200, 100));
+  }
+
+  h1, h2, h3, p {
+    text-align: center;
+    padding: 10px;
+    text-decoration: wavy;
+    color: black;
+  }
+
+  ul {
+    list-style-type: circle;
+    padding: 10px;
+    color: black;
+    font-size: larger;
+  }
+  
+  .home-things-list, .home-comments-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  li {
+    list-style-type: square;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 20px;
+    padding: 80px 20px 20px;
+  }
+
+  .location-section {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+  }
+  
+  .about-section {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    padding-top: 80px;
+  }
+  
+  .things-section {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    padding: 20px;
+  }
+  
+  .comments-section {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    padding: 20px;
+  }
+
+  .home-h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+
+
+  /*-------------------- COMMENTS CSS --------------------*/
+
+  .delete-button {
+    padding: 5px;
+    border-radius: 20px;
+    display: block;
+  }
+
+  .delete-form {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .edit-button {
+    padding: 5px;
+    padding-right: 20px;
+    border-radius: 20px;
+    
+  }
+
+  .edit-form {
+    display: inline-block;
+  }
+
+  .comment-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .comment-form-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .comment-form-button {
+    padding: 10px;
+    background-color: #c7d2dc;
+    color: rgb(218, 110, 110);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .comment-form-button:hover {
+    background-color: #0056b3;
+    color: #0056b3;
+  }
+
+  .comments-list {
+    list-style-type: square;
+    display: block;
+    justify-content: left;
+    flex-wrap: wrap; 
+    padding: 20px; 
+    font-size: larger;
+  }
+
+  form {
+    margin: 20px auto;
+    text-align: center;
+    text-shadow: 2px 2px 5px blue
+  }
+
+  .comments-link {
+    text-align: center;
+    text-shadow: #603939;
+    display: block;
+  }
+
+  /*-------------------- IMG CSS --------------------*/
+
+  .img-patrick {
+    border: 2px solid #e07f7f;
+    border-radius: 5px;
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .img-people {
+    border: 2px solid #e07f7f;
+    border-radius: 5px;
+    width: 30%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .img-party {
+    border-radius: 20px;
+    width: 90%;
+    border-width: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }

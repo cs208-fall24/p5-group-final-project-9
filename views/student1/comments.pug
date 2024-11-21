@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title Comments for the Party Major
+    link(rel='stylesheet' href='css/student1.css')
+  body(class="comments-body")
+    img(src="img/Party.jpg", alt="party", class="img-party")
+    h1(class="comments-h1") Manage Comments
+    a(href="\student1" class="comments-link") Return to home page 
+    form(action='/comments/add' method='POST')
+      label(for='comment' class="comments-from-label") Add a new comment:
+      input(type='text' name='comment' required class="comments-from-input")
+      button(type='submit' class="comments-from-button") Post Comment
+
+    h2(class="comments-h2") Current Comments
+    ul(class="comments-list")
+      each comment in comments
+        li(class="comments-list-li")
+          | #{comment.text} 
+          form(action=`/comments/delete/${comment.id}` method="GET" class="delete-form")
+            button(type="submit" class="delete-button") Delete
+          form(action=`/comments/edit/${comment.id}` method="GET" class="edit-form")
+            button(type="submit" class="edit-button") Edit
