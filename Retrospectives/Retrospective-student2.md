@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Davina Causey
+- email: davinacausey@u.boisestate.edu
 
 ## Experience
 
