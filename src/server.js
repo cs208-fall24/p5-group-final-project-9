@@ -11,6 +11,13 @@ db.run(`CREATE TABLE IF NOT EXISTS party_comments (
   text TEXT NOT NULL
 )`); // Added by Chandler
 
+// Code from Davina
+db.run(`CREATE TABLE IF NOT EXISTS s2_comments (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    submission TEXT NOT NULL
+  )
+`);
+
 const app = express()
 app.use(express.static('public'))
 app.set('views', 'views')
@@ -96,6 +103,7 @@ db.all('SELECT * FROM party_comments', (err, rows) => {
 });
 
 // ---------------------------------------------------------------
+
 
 
 app.get('/', function (req, res) {
