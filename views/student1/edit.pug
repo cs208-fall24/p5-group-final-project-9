@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Edit Comment
+    link(rel='stylesheet' href='css/student1.css')
+  body
+    h1 Edit Comment
+    a(href="/comments") Back to comments page
+
+    form(action=`/comments/edit/${comment.id}` method="POST" class="edit-page-form")
+      label(for="comment" class="edit-page-label") Update your comment:
+      input(type="text" name="comment" value=`${comment.text}` required class="edit-page-input")
+      button(type="submit" class="edit-page-button") Save Changes
