@@ -1,3 +1,226 @@
-body{
-    background-color: hotpink;
-}
+
+  /*-------------------- INDEX CSS --------------------*/
+  body {
+    font-family: Arial, sans-serif;
+    color: #603939;
+    background-color: chartreuse;
+    background-image: repeating-radial-gradient(rgb(157, 76, 76), rgb(214, 214, 122), rgb(170, 241, 170), rgb(239, 200, 100));
+  }
+
+  h1, h2, h3, p {
+    text-align: center;
+    padding: 10px;
+    text-decoration: wavy;
+    color: black;
+  }
+
+  ul {
+    list-style-type: circle;
+    padding: 10px;
+    color: black;
+    font-size: larger;
+  }
+  
+  .home-things-list, .home-comments-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+  }
+  
+  li {
+    list-style-type: square;
+    padding: 10px;
+    padding-left: 0;
+    padding-right: 30px;
+  }
+
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 20px;
+    padding: 80px 20px 20px;
+  }
+
+  .location-section {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 20px;
+  }
+  
+  .about-section {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 20px;
+    padding-top: 80px;
+  }
+  
+  .things-section {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    padding: 20px;
+  }
+  
+  .comments-section {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    padding: 20px;
+  }
+
+  .home-h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+
+
+  /*-------------------- COMMENTS CSS --------------------*/
+
+  .delete-button {
+    padding: 5px;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .delete-button:hover {
+    background-color: #c6001a9f;
+  }
+
+  .delete-form {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .edit-button {
+    padding: 5px;
+    padding-right: 20px;
+    border-radius: 10px;
+    
+  }
+
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+
+  .edit-form {
+    display: inline-block;
+  }
+
+  .comments-form {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .comments-form-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .comments-form-button {
+    padding: 10px;
+    background-color: #ff0095;
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+
+  }
+  
+  .comments-form-button:hover {
+    background-color: #0056b3;
+    color: #000000;
+    cursor: crosshair;
+    border-style: dotted;
+    border-color: #ff0095;
+    border-radius: 50px;
+  }
+
+  .comments-list {
+    list-style-type: square;
+    display: block;
+    justify-content: left;
+    flex-wrap: wrap; 
+    padding: 20px; 
+    font-size: xx-large;
+    margin-left: 50px;
+  }
+
+  .comments-link:hover {
+    background-image: url(../img/tobey-cry.gif);
+    padding:200px;
+  }
+
+  .comments-link {
+    text-align: center;
+    display: block;
+    font-size: x-large;
+    border: 5px black;
+  }
+
+  .comments-link:hover {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+  }
+
+
+  /*-------------------- IMG CSS --------------------*/
+
+  .img-patrick {
+    border: 2px solid #e07f7f;
+    border-radius: 5px;
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .img-people {
+    border: 2px solid #e07f7f;
+    border-radius: 5px;
+    width: 30%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .img-party {
+    border: 2px solid #e07f7f;
+    border-radius: 5px;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-patrick:hover {
+    animation: rotation 5s infinite linear; 
+  }
+
+  .img-people:hover {
+    animation: rotation 5s infinite linear;
+  }
+
+  .img-party:hover {
+    animation: rotation 5s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+
+  }
