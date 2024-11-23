@@ -1,0 +1,12 @@
+doctype html
+head
+  title UBW Edit Comment
+  link(rel='stylesheet' href='css/student2.css')
+body 
+  h1.headings Edit Comment
+  form(action=`/commentsPage/edit/${comment2.id}` method='POST')
+    label(for='comment') Edit your comment:
+    input#comment(type='text' name='comment' value=`${comment2.submission}` required)
+    input(type='submit' value='Submit')
+  a(href='/commentsPage') Go back to comments
+  a(href='/') Go back to home
