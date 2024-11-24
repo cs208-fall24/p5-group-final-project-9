@@ -1,4 +1,20 @@
 doctype html
 head
-  title comments Page
+  title Underwater Basket Weaving Comments Page
   link(rel='stylesheet' href='css/student2.css')
+h1#commentsh1.headings Underwater Basket Weaving Comments Page
+h2.headings Leave a comment!
+a(href="\student2" class="comments-link") Return to home page 
+form(action='/commentsPage/add' method='POST')
+  label(for='comment') Add a comment:
+  input#comment(type='text' name='comment' placeholder='Enter your comment here' required)
+  input(type='submit' value='Submit')
+h2.headings Comments
+ul#commentsul
+  each comment in comments2 
+    li(class="comments-list-li")
+      | #{comment.submission} 
+      form(action=`/commentsPage/delete/${comment.id}` method="GET")
+        button(type="submit" class="delete-button") Delete
+      form(action=`/commentsPage/edit/${comment.id}` method="GET")
+        button(type="submit" class="edit-button") Edit
