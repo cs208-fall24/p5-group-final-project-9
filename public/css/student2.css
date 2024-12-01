@@ -1,4 +1,57 @@
+*{
+    box-sizing: border-box;
+ 
+}
 body{
-    background-image: url();
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../img/water.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: 'papyrus';
+    color: rgb(184, 239, 245);
+}
+#major{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(184, 239, 245);
+}
+.island-img{
+    position:absolute;
+    top: 40%;
+    left: 60%;
+    width: 500px;
+    height: 300px;
     
 }
+#section1{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+}
+#section2{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+}
+#section3{
+    position: absolute;
+    top: 90%;
+    left: 60%;
+    width: 500px;
+    height: 500px;
+}
+#indexcomments{
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    width: 500px;
+    height: 500px;
+}
+
+
+
