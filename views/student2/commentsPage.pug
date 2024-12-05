@@ -2,19 +2,28 @@ doctype html
 head
   title Underwater Basket Weaving Comments Page
   link(rel='stylesheet' href='css/student2.css')
-h1#commentsh1.headings Underwater Basket Weaving Comments Page
-h2.headings Leave a comment!
-a(href="\student2" class="comments-link") Return to home page 
-form(action='/commentsPage/add' method='POST')
-  label(for='comment') Add a comment:
-  input#comment(type='text' name='comment' placeholder='Enter your comment here' required)
-  input(type='submit' value='Submit')
-h2.headings Comments
-ul#commentsul
-  each comment in comments2 
-    li(class="comments-list-li")
-      | #{comment.submission} 
-      form(action=`/commentsPage/delete/${comment.id}` method="GET")
-        button(type="submit" class="delete-button") Delete
-      form(action=`/commentsPage/edit/${comment.id}` method="GET")
-        button(type="submit" class="edit-button") Edit
+body
+  h1(class='headings' id='comments-page') Underwater Basket Weaving Comments Page
+  div
+    img(src="/img/ubw1.png", alt="man weaving basket" class="man-basket-img")
+  h2(class='headings') Leave a comment!
+  div 
+  form(action='/commentsPage/add' method='POST')
+    label(for='comment') Add a comment:
+    input(type='text' name='comment' id='comment' placeholder='Enter your comment here' required)
+    input(type='submit' value='Submit')
+  h2(class='headings') Comments
+  ul(id='comments-list')
+    each comment in comments2 
+      li(class="comments-list-li")
+        span #{comment.submission}
+        div(class="buttons-container")
+          form(action=`/commentsPage/delete/${comment.id}` method="GET")
+            button(type="submit" class="delete-button") Delete
+          form(action=`/commentsPage/edit/${comment.id}` method="GET")
+            button(type="submit" class="edit-button") Edit
+  footer(class='links-footer')
+    div 
+      a(href='/student2') Return to Major
+    div
+      a(href='/') Return to University

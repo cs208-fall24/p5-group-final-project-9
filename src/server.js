@@ -128,11 +128,6 @@ app.get('/comments', (req, res) => {
    );
  })
 
-app.get('/student2', function (req, res) {
-  console.log('GET called')
-  res.render('student2')
-})
-
 app.get('/student3', function (req, res) {
   console.log('GET called')
   res.render('student3')
@@ -208,31 +203,28 @@ app.post('/commentsPage/edit/:id', (req, res) => {
   });
 });
 
-// Query to get 5 random comments
+
 app.get('/student2', function (req, res) {
   console.log('GET called to fetch random comments');
 
-  const local = { comments_array: [] }; // array to store fetched comments
+  const query = 'SELECT * FROM s2_comments ORDER BY RANDOM() LIMIT 5'; 
 
-  db.each(
-    'SELECT * FROM s2_comments ORDER BY RANDOM() LIMIT 5',
-    function (err, row) {
+  db.all(query, [], (err, rows) => {
       if (err) {
-        console.error('Error fetching comment:', err);
-      } else {
-        local.comments_array.push({ id: row.id, submission: row.submission });
+          console.error('Error fetching comments:', err);
+          return res.render('student2/index', { randCom_array: [] });
       }
-    },
-    function (err) {
-      if (!err) {
-        console.log('Rendering index with comments:', local.comments_array);
-        res.render('student2/index', local); // comments to the template
-      } else {
-        console.error('Error finalizing query:', err);
-        res.render('student2/index', { comments: [] }); // without comments on error
-      }
-    }
-  );
+
+      const indexComments = {
+          randCom_array: rows.map(row => ({
+              id: row.id,
+              submission: row.submission,
+          })),
+      };
+
+      console.log('Rendering index with comments:', indexComments.randCom_array);
+      res.render('student2/index', indexComments);
+  });
 });
 
 ///////////////////////////////////////////////////////////////////

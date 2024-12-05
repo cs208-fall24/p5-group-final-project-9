@@ -78,15 +78,18 @@
     margin: 0;
     padding: 20px;
   }
-  
 
 
   /*-------------------- COMMENTS CSS --------------------*/
 
   .delete-button {
     padding: 5px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: block;
+  }
+
+  .delete-button:hover {
+    background-color: #c6001a9f;
   }
 
   .delete-form {
@@ -97,38 +100,49 @@
   .edit-button {
     padding: 5px;
     padding-right: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     
+  }
+
+  .edit-button:hover {
+    background-color: #0056b3;
   }
 
   .edit-form {
     display: inline-block;
   }
 
-  .comment-form {
-    display: flex;
-    flex-direction: column;
+  .comments-form {
+    text-align: center;
+    padding: 20px;
   }
   
-  .comment-form-input {
+  .comments-form-input {
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #000000;
     border-radius: 5px;
+    margin: 5px;
   }
   
-  .comment-form-button {
+  .comments-form-button {
     padding: 10px;
-    background-color: #c7d2dc;
-    color: rgb(218, 110, 110);
-    border: none;
+    background-color: #ff0095;
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
     border-radius: 5px;
-    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+
   }
   
-  .comment-form-button:hover {
+  .comments-form-button:hover {
     background-color: #0056b3;
-    color: #0056b3;
+    color: #000000;
+    cursor: crosshair;
+    border-style: dotted;
+    border-color: #ff0095;
+    border-radius: 50px;
   }
 
   .comments-list {
@@ -137,20 +151,27 @@
     justify-content: left;
     flex-wrap: wrap; 
     padding: 20px; 
-    font-size: larger;
+    font-size: xx-large;
+    margin-left: 50px;
   }
 
-  form {
-    margin: 20px auto;
-    text-align: center;
-    text-shadow: 2px 2px 5px blue
+  .comments-link:hover {
+    background-image: url(../img/tobey-cry.gif);
+    padding:200px;
   }
 
   .comments-link {
     text-align: center;
-    text-shadow: #603939;
     display: block;
+    font-size: x-large;
+    border: 5px black;
   }
+
+  .comments-link:hover {
+    color: rgb(255, 255, 255);
+    font-size: xx-large;
+  }
+
 
   /*-------------------- IMG CSS --------------------*/
 
@@ -173,10 +194,33 @@
   }
 
   .img-party {
-    border-radius: 20px;
-    width: 90%;
-    border-width: 10px;
+    border: 2px solid #e07f7f;
+    border-radius: 5px;
+    width: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .img-patrick:hover {
+    animation: rotation 5s infinite linear; 
+  }
+
+  .img-people:hover {
+    animation: rotation 5s infinite linear;
+  }
+
+  .img-party:hover {
+    animation: rotation 5s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+
   }

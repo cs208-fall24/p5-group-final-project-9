@@ -3,54 +3,57 @@ html
   head
     title Under Water Basket Weaving Masters Program
     link(rel='stylesheet' href='css/student2.css')
-  h1(class='headings' id='student name') Davina Causey
-  h2(class='headings' id='major') MFA Subaquatic Basketry
-  section(class='sections' id='section1')
-    h2(class='headings' id='location') Location
-    p
-      | Located on the enchanting Sisyphean Island, nestled within the heart of the Java Sea.
-      | The island is a remote illusion offering an idyllic setting for farcical persuits
-      | and quiet descent into delusion.
-  section(class='sections' id='section2')
-    h2(class='headings' id='about') About
-    section#subsec1.subsections
-      h3(class='headings') Escape!
+  body
+    h1(class='headings' id='student name') Davina Causey
+    h2(class='headings' id='major') MFA Subaquatic Basketry
+    section(class='sections' id='section1')
+      h2(class='headings' id='location') Location
       p
-        | Let go of the constraints imposed by contemporary life and dive into a world
-        | where the fatuous becomes profound. Subaquatic Basket-Weaving isn&apos;t just a major;
-        | its a rebellion against the mundane expectations of the world above.
-    section#subsec2.subsections
-      h3(class='headings') A Major with Depth
-      p
-        | Not only will you improve your basket weaving skill by fighting the currents but you will also enhance your lung capacity.
-        | Students build remarkable resilience as they overcome the daily challenge of not drowning.
-    section#subsec3.subsections
-      h3(class='headings') Weaving the Impossible
-      p
-        | Underwater Basket-weaving is not just about crafting baskets; its about
-        | defying the odds and convincing the world you create art. As students dive into
-        | the depths of the Java Sea, they realize the real art of underwater Basket-weaving
-        | is not in creating baskets it&apos;s in embracing the impossible.
-  section(class='sections' id='section3')
-    h2(class='headings' id='thingstodo') Things To Do
-    h3(class='headings') Where you could go?
-      ul
-        li
-          | Beach Bum
-        li
-          | Peddler
-        li
-          | Aquarium Cleaner
-        li
-          | Mermaid 
-        li
-          | U.S. President
-section(class="sections" id="indexcomments")
-  h2 
-    a(href="/commentsPage" class="home-link") Comments
-  if comments_array && comments_array.length > 0
-    ul(class="home-comments-list")
-      each comment in comments_array
-        li= comment.submission
-    
+        | Located on the enchanting Sisyphean Island, nestled within the heart of the Java Sea.
+        | The island is a remote illusion offering an idyllic setting for farcical persuits
+        | and quiet descent into delusion.
+      img(src="/img/island.jpg", alt="island" class="island-img")
+    section(class='sections' id='section2')
+      h2(class='headings' id='about') About
+      section(class='subsections' id='subsec1')
+        h3(class='headings') Escape!
+        p
+          | Let go of the constraints imposed by contemporary life and dive into a world
+          | where the fatuous becomes profound. Subaquatic Basket-Weaving isn&apos;t just a major;
+          | its a rebellion against the mundane expectations of the world above.
+      section(class='subsections' id='subsec2')
+        h3(class='headings') A Major with Depth
+        p
+          | Not only will you improve your basket weaving skill by fighting the currents but you will also enhance your lung capacity.
+          | Students build remarkable resilience as they overcome the daily challenge of not drowning.
+        img(src="/img/uwb3.png", alt="woman weaving basket" class="woman-basket-img")
+      section(class='subsections' id='subsec3')
+        h3(class='headings') Weaving the Impossible
+        p
+          | Underwater Basket-weaving is not just about crafting baskets; its about
+          | defying the odds and convincing the world you create art. As students dive into
+          | the depths of the Java Sea, they realize the real art of underwater Basket-weaving
+          | is not in creating baskets it&apos;s in embracing the impossible.
+    section(class='sections' id='section3')
+      h2(class='headings' id='thingstodo') Things To Do
+      h3(class='headings') Where you could go:
+        ul
+          li
+            | Beach Bum
+          li
+            | Peddler
+          li
+            | Aquarium Cleaner
+          li
+            | Mermaid
+          li
+            | U.S. President
+    footer(class='links-footer')
+      h2
+        a(href="/commentsPage" class="home-link") Comments
+      if randCom_array && randCom_array.length > 0
+        ul(class="home-comments-list")
+          each comment in randCom_array
+            li= comment.submission
+  
       
