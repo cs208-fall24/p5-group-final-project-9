@@ -1,57 +1,110 @@
+/* All Pages */
+/* Universal settings */
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
  
 }
+/* Body Styles */
 body{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack sections vertically*/
+    align-items: center; /* Center content horizontally */
     background-image: url(../img/water.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
-    font-family: 'papyrus';
+    background-size: cover;
+    font-family: 'papyrus', sans-serif;
+    color: rgb(184, 239, 245);
+    min-height: 100vh;
+    padding: 20px;
+}
+/* Image styles */
+.island-img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+    
+}
+.woman-basket-img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+    
+}
+.man-basket-img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+}
+.floating-img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px 0;
+    
+}
+/* Common Section Styles */
+.sections{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;/*Limit width for larger screens*/
+    padding: 20px;
+    margin: 20px 0;/*Space between sections*/
+    background-color: rgba(0, 0, 0, 0.5);/*Semi-transparent background for readability*/
+    border-radius: 10px;
+
+}
+/*Form Styles*/
+form {
+    margin-top: 20px; /* Add 20px margin at the top */
+}
+/* Footer Styles */
+.links-footer{
+    margin-top: auto;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
     color: rgb(184, 239, 245);
 }
+.links-footer a:visited {
+    color: rgb(100, 200, 255);
+}
+
+/* Index */
+/* Major Title */
 #major{
     text-align: center;
     font-size: 50px;
-    color: rgb(184, 239, 245);
+    margin: 20px;
 }
-.island-img{
-    position:absolute;
-    top: 40%;
-    left: 60%;
-    width: 500px;
-    height: 300px;
-    
+
+/* CommentsPage */
+.comments-list-li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
-#section1{
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    width: 500px;
-    height: 500px;
+.comments-list-li span {
+    flex-grow: 1;
 }
-#section2{
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    width: 500px;
-    height: 500px;
+.buttons-container {
+    display: flex;
+    gap: 10px;
 }
-#section3{
-    position: absolute;
-    top: 90%;
-    left: 60%;
-    width: 500px;
-    height: 500px;
+.delete-button, .edit-button {
+    margin-left: 10px;
 }
-#indexcomments{
-    position: absolute;
-    top: 100%;
-    left: 45%;
-    width: 500px;
-    height: 500px;
-}
+
+
+
 
 
 
